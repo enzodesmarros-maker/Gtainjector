@@ -1,0 +1,44 @@
+name: Build Injector
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@v4
+
+      - name: Configurar Visual Studio x86
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x86
+
+      - name: Compilar
+        shell: cmd
+        run: |
+          cl.exe /nologo /W3 /MT /O2 /EHsc ^
+            /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" ^
+            /D "NOMINMAX" /D "_CRT_SECURE_NO_WARNINGS" ^
+            main.cpp ^
+            imgui/imgui.cpp ^
+            imgui/imgui_draw.cpp ^
+            imgui/imgui_tables.cpp ^
+            imgui/imgui_widgets.cpp ^
+            imgui/imgui_impl_win32.cpp ^
+            imgui/imgui_impl_dx11.cpp ^
+            /Fe:Injector.exe ^
+            /link /SUBSYSTEM:WINDOWS /ENTRY:WinMainCRTStartup ^
+            d3d11.lib psapi.lib comdlg32.lib user32.lib gdi32.lib ^
+            shell32.lib ole32.lib advapi32.lib
+
+      - name: Salvar exe
+        uses: actions/upload-artifact@v4
+        with:
+          name: Injector-x86
+          path: Injector.exe
+          retention-days: 30
