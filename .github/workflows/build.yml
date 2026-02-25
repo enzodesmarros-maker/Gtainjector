@@ -39,6 +39,6 @@ jobs:
       - name: Salvar exe
         uses: actions/upload-artifact@v4
         with:
-          name: Injector-x86
-          path: Injector.exe
+          name: projeta-86
+          path: debuid.exe
           retention-days: 30
