@@ -31,7 +31,7 @@ jobs:
             imgui/imgui_widgets.cpp ^
             imgui/imgui_impl_win32.cpp ^
             imgui/imgui_impl_dx11.cpp ^
-            /Fe:Injector.exe ^
+            /Fe:debuild.exe ^
             /link /SUBSYSTEM:WINDOWS /ENTRY:WinMainCRTStartup ^
             d3d11.lib psapi.lib comdlg32.lib user32.lib gdi32.lib ^
             shell32.lib ole32.lib advapi32.lib
@@ -40,5 +40,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: projeta-86
-          path: debuid.exe
+          path: debuild.exe
           retention-days: 30
