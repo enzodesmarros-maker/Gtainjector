@@ -41,7 +41,13 @@ Clique em **Procurar** e navegue ate a pasta onde esta o arquivo `.dll`. Selecio
 
 ## ⚠️ O que fazer se o processo fechar?
 
-Isso pode acontecer por alguns motivos: 1) A DLL nao e compativel com o processo alvo. 2) A arquitetura da DLL (x86/x64) nao corresponde ao processo. 3) O processo nao estava totalmente carregado no momento da injecao. 4) A DLL possui dependencias que nao estao presentes no processo. Espere o processo carregar completamente antes de injetar e verifique se a DLL e do tipo correto para o processo.
+Isso pode acontecer por alguns motivos:
+1. A DLL nao e compativel com o processo alvo.
+2. A arquitetura da DLL (x86/x64) nao corresponde ao processo.
+3. O processo nao estava totalmente carregado no momento da injecao.
+4. A DLL possui dependencias que nao estao presentes no processo.
+
+Espere o processo carregar completamente antes de injetar e verifique se a DLL e do tipo correto para o processo.
 
 ---
 
@@ -75,6 +81,17 @@ O autor nao se responsabiliza por qualquer uso indevido desta ferramenta. O usua
 
 - xitzinho — Black rock
 - auralobo — clean da pista
+
+---
+
+## ⚖️ Licenca
+
+Copyright (c) 2026 enzodesmarros-maker
+
+- Uso pessoal e educacional permitido.
+- E proibido redistribuir, modificar ou usar este codigo para fins comerciais sem autorizacao expressa do autor.
+- E proibido remover o aviso de copyright.
+- O autor nao se responsabiliza por qualquer uso indevido desta ferramenta.
 
 ---
 ---
@@ -122,7 +139,13 @@ Click **Procurar** and navigate to the folder where your `.dll` file is located.
 
 ## ⚠️ What to do if the process closes?
 
-This can happen for a few reasons: 1) The DLL is not compatible with the target process. 2) The DLL architecture (x86/x64) does not match the process. 3) The process was not fully loaded at the time of injection. 4) The DLL has dependencies that are not present in the process. Wait for the process to fully load before injecting and make sure the DLL is the correct type for the process.
+This can happen for a few reasons:
+1. The DLL is not compatible with the target process.
+2. The DLL architecture (x86/x64) does not match the process.
+3. The process was not fully loaded at the time of injection.
+4. The DLL has dependencies that are not present in the process.
+
+Wait for the process to fully load before injecting and make sure the DLL is the correct type for the process.
 
 ---
 
@@ -156,3 +179,15 @@ The author is not responsible for any misuse of this tool. The user is solely re
 
 - xitzinho — Black rock
 - auralobo — clean da pista
+
+---
+
+## ⚖️ License
+
+Copyright (c) 2026 enzodesmarros-maker
+
+- Personal and educational use permitted.
+- Redistributing, modifying or using this code for commercial purposes without express authorization from the author is prohibited.
+- Removing the copyright notice is prohibited.
+- The author is not responsible for any misuse of this tool.
+
